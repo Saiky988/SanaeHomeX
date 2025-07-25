@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sanae Executors</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Rubik:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Nunito', sans-serif;
       background-color: #1a1a2e;
       color: white;
       padding-top: 50px; /* để tránh header đè */
@@ -28,12 +28,27 @@
     }
 
     .logo {
+      font-family: 'Rubik', sans-serif;
       font-size: 24px;
       font-weight: 600;
-      background: linear-gradient(to right, #ff00c8, #6e7bff);
+      background: linear-gradient(270deg, #ff00c8, #6e7bff, #ff00c8);
+      background-size: 200% 200%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      animation: waveColor 5s ease-in-out infinite;
       cursor: pointer;
+    }
+
+    @keyframes waveColor {
+      0% {
+      background-position: 0% 50%;
+      }
+      50% {
+      background-position: 100% 50%;
+      }
+      100% {
+      background-position: 0% 50%;
+      }
     }
 
     .menu-container {
@@ -165,7 +180,7 @@
 
 <!-- Header -->
 <header>
-  <div class="logo" onclick="window.location.href='https://saiky988.github.io/SanaeHomeX/'">SanaeEx</div>
+  <div class="logo" onclick="window.location.href='https://saiky988.github.io/SanaeExecutorX/'">SanaeEx</div>
   <div class="menu-container">
     <div class="menu-btn" onclick="toggleDropdown()">☰</div>
     <div class="dropdown" id="dropdownMenu">
